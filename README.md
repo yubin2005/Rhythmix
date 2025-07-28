@@ -1,6 +1,6 @@
 Rhythmix is a full-stack web application that uses AI to recommend music based on your mood. You can explore trending tracks, generate a personalized playlist with Google Gemini, play local files or online streams, and manage your own library.
 
-![Home Page](screenshots/Library.png)  
+![Home Page](screenshots/Library.png width="300")  
 *Main player interface with album art, controls, and recommended playlists.*
 
 ![Explore Page](screenshots/Explore.png)  
