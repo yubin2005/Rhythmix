@@ -1,0 +1,150 @@
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fdfaf6;
+}
+  
+.login-container, .registration-container, .reset-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-box, .registration-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+}
+  
+.login-box h2, .registration-box h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+  
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #7f8c8d;
+}
+  
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+  
+.btn-login {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+  
+.btn-login:hover {
+  background-color: #2980b9;
+}
+
+.password {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #6c757d; 
+  text-decoration: none;
+  text-align: right;
+}
+
+.password:hover {
+  color:  #495057;
+  text-decoration: underline;
+}
+  
+.signup-link {
+  margin-top: 10px;
+  font-size: 12px;
+}
+  
+.signup-link a {
+  color: #3498db;
+  text-decoration: none;
+}
+  
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;              
+  width: 100%;             
+  padding: 0.6rem 0;       
+  background-color: #fff;
+  color: #444;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;      
+  cursor: pointer;
+  transition: background-color .2s, border-color .2s;
+}
+
+.login-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #bbb;
+}
+
+.login-btn:active {
+  background-color: #ececec;
+}
+
+.google-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.reset-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+}
+
+/* error/success message under the form */
+.message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #e74c3c;  
+}
+
+#resetContainer .form-group:first-of-type {
+  margin-top: 16px;  
+}
+
+.hidden {
+  display: none;
+}

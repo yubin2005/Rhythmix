@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Rhythmix</title>
+  <link rel="icon" type="image/png" href="../music-icon.png">
+  <link rel="stylesheet" href="../music.css">
+  <link rel="stylesheet" href="../sidebar.css">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <h1 class="logo"><a href="../Home/music.html">Rhythmix</a></h1>
+      <nav>
+        <ul>
+          <li><a href="../Home/music.html">HOME</a></li>
+          <li><a href="../Explore/explore.html">EXPLORE</a></li>
+          <li><a href="../Library/library.html">YOUR LIBRARY</a></li>
+          <li><a href="login.html" id="authLink">LOG IN / SIGN UP</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="login-container" id="loginContainer">
+        <div class="login-box">
+          <h2>Log In</h2>
+          <form id="loginForm">
+
+            <button type="button" id="googleLoginBtn" class="login-btn">
+              <img src="../google-logo.png" class="google-icon">
+              <span>Continue with Google</span>
+            </button>
+
+            <div class="form-group">
+              <label for="loginEmail">*Username or email address</label>
+              <input type="email" id="loginEmail" name="email" required aria-label="Email"/>
+            </div>
+
+            <div class="form-group">
+              <label for="loginPassword">*Password</label>
+              <input type="password" id="loginPassword" name="password" required aria-label="Password"/>
+
+              <a href="#" class="password" id="forgotLink">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn-login">Log In</button>
+            <p class="signup-link">Don't have an account? <a href="#" id="toSignup">Sign Up</a></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="registration-container hidden" id="registrationContainer">
+        <div class="registration-box">
+          <h2>Sign Up</h2>
+          <form id="signupForm">
+
+            <button type="button" id="googleSignupBtn" class="login-btn">
+              <img src="../google-logo.png" class="google-icon">
+              <span>Continue with Google</span>
+            </button>
+
+            <div class="form-group">
+              <label for="username">*Username</label>
+              <input type="text" id="username" name="username" required aria-label="Username" />
+            </div>
+
+            <div class="form-group">
+              <label for="signupEmail">*Email</label>
+              <input type="email" id="signupEmail" name="email" required aria-label="Email" />
+            </div>
+
+            <div class="form-group">
+              <label for="signupPassword">*Password</label>
+              <input type="password" id="signupPassword" name="password" required aria-label="Password" />
+            </div>
+            <button type="submit" class="btn-login">Sign Up</button>
+            <p class="signup-link">Already have an account? <a href="#" id="toLogin">Log In</a></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="reset-container hidden" id="resetContainer">
+        <div class="reset-box">
+          <h2>Reset Password</h2>
+          <form id="resetForm">
+
+            <div class="form-group">
+              <label for="resetEmail">*Email address</label>
+              <input type="email" id="resetEmail" required />
+            </div>
+
+            <button type="submit" class="btn-login">Send Reset Link</button>
+            <p class="signup-link">
+              <a href="#" id="backToLogin">Back to Log In</a>
+            </p>
+            <p id="resetMessage" class="message"></p>
+          </form>
+        </div>
+      </div>
+      
+    </main>
+  </div>
+  <script type="module" src="firebaseConfig.js"></script>
+  <script type="module" src="login.js"></script>
+  <script type="module" src="signout.js"></script>
+  <script type="module" src="reset.js"></script>
+</body>
+</html>

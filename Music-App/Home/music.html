@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rhythmix</title>
+  <link rel="icon" type="image/png" href="../music-icon.png">
+  <link rel="stylesheet" href="../music.css">
+  <link rel="stylesheet" href="../sidebar.css">
+  <link rel="stylesheet" href="progress.css">
+  <link rel="stylesheet" href="recommended.css">
+  <link rel="stylesheet" href="player.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="search.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <h1 class="logo"><a href=music.html>Rhythmix</a></h1>
+      <nav>
+        <ul>
+          <li><a href="music.html">HOME</a></li>
+          <li><a href="../Explore/explore.html">EXPLORE</a></li>
+          <li><a href="../Library/library.html">YOUR LIBRARY</a></li>
+          <li><a href="../Login/login.html" id="authLink">LOG IN / SIGN UP</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-bar">
+
+        <div class="search-box">
+          <input id="search-input"
+                  type="text" 
+                  placeholder="Search" 
+                  aria-label="Search music" />
+          <span id="search-btn" class="search-icon">🔍</span>
+          <ul id="search-results" class="search-results hidden"></ul>
+        </div>
+
+        <div class="user-icon" aria-label="User Profile">
+          <img class="user-icon" src="../avatar.png">
+        </div>
+      </header>
+
+      <div class="content-wrapper">
+        <section class="player-section">
+
+          <audio id="audio-player"></audio>
+          <div class="cover">
+            <img src="..//IMG_4307.jpg" alt="Album Cover" />
+          </div>
+          <h2 class="track-title">--</h2>
+          <p class="track-artist">--</p>
+          <div class="controls">
+            <button class="btn-prev" aria-label="Previous Track">&#x23ee;</button>
+            <button class="btn-play" aria-label="Pause">&#x23f8;</button>
+            <button class="btn-next" aria-label="Next Track">&#x23ed;</button>
+          </div>
+        </section>
+
+        <aside class="lyrics-panel">
+          <h3>Lyrics</h3>
+          <ul id="lyrics-list" class="lyrics-list"></ul>
+        </aside>
+      </div>
+
+      <section class="recommended">
+        <h3>Recommended Playlists</h3>
+        <div class="playlist-cards">
+          <div class="card">Top Hits</div>
+          <div class="card">Chill Vibes</div>
+          <div class="card">Indie Mix</div>
+          <div class="card">Acoustic Afternoon</div>
+          <div class="card">Rap Rotation</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-player">
+      <div class="now-playing">
+        <img src="../IMG_4307.jpg" alt="Cover" />
+        <div class="info">
+          <p class="current-title">--</p>
+          <p class="current-artist">--</p>
+        </div>
+      </div>
+      <div class="footer-controls">
+        <button class="btn-prev" aria-label="Previous Track" >&#x23ee;</button>
+        <button class="btn-play" aria-label="Pause">&#x23f8;</button>
+        <button class="btn-next" aria-label="Next Track">&#x23ed;</button>
+      </div>
+      <div class="progress">
+        <span class="current-time">0:00</span>
+        <div class="progress-bar" aria-label="Playback Progress">
+          <div class="progress-preview"></div>
+          <div class="progress-filled"></div>
+        </div>
+        <span class="duration">4:00</span>
+      </div>
+      <button class="btn-queue" aria-label="View Queue">&#9776;</button>
+    </footer>
+
+    <aside id="queue-panel" class="queue-panel">
+      <h4>Your Playlists</h4>
+      <ul id="queue-list"></ul>
+      <button id="close-queue">&times;</button>
+    </aside>
+
+  </div>
+  <script type="module" src="player.js" defer></script>
+  <script type="module" src="search.js" defer></script>
+  <script type="module" src="queue.js" defer></script>
+  <script type="module" src="../Login/signout.js" defer></script>
+</body>
+</html>

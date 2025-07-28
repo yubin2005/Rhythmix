@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXPLORE</title>
+  <link rel="icon" type="image/png" href="../music-icon.png">
+  <link rel="stylesheet" href="../music.css">
+  <link rel="stylesheet" href="../sidebar.css">
+  <link rel="stylesheet" href="explore.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <h1 class="logo"><a href="../Home/music.html">Rhythmix</a></h1>
+      <nav>
+        <ul>
+          <li><a href="../Home/music.html">HOME</a></li>
+          <li><a href="explore.html">EXPLORE</a></li>
+          <li><a href="../Library/library.html">YOUR LIBRARY</a></li>
+          <li><a href="../Login/login.html" id="authLink">LOG IN / SIGN UP</a></li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="main-content">
+
+      <section class="mood-selector">
+        <h2>Select Your Mood</h2>
+        <div class="mood-buttons">
+          <button data-mood="Chill">Chill</button>
+          <button data-mood="Party">Party</button>
+          <button data-mood="Focus">Focus</button>
+          <button data-mood="Sad">Sad</button>
+          <button data-mood="Surprise Me">Surprise Me</button>
+          <input type="text" class="mood-input" placeholder="Type your mood" />
+        </div>
+        <div class="mood-playlist" id="moodPlaylist">
+
+        </div>
+      </section>
+
+      <section class="ai-generator">
+        <h2>Discover New Music Just For You</h2>
+        <button id="generateBtn" disabled>Generate AI Playlist</button>
+        <div id="loadingContainer" class="loading hidden">
+          <div id="spinner" class="spinner"></div>
+          <span id="loadingTip">Hang Tight, Your custom playlist is on its way...</span>
+        </div>
+
+        <div class="ai-playlist" id="aiPlaylist"></div>
+      </section>
+      
+      <section class="trending">
+        <h2>Now Trending</h2>
+        <ol class="trending-list">
+        </ol>
+      </section>
+    </main>
+
+  </div>
+  <script type="module" src="../Login/signout.js"></script>
+  <script type="module" src="mood.js"></script>
+  <script type="module" src="trending.js"></script>
+</body>
+</html>

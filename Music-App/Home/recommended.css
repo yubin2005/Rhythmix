@@ -1,0 +1,36 @@
+.recommended {
+  margin-top: 20px;
+}
+
+.recommended h3 {
+  font-size: 20px;
+  color: #1e3a8a;
+  margin-bottom: 15px;
+}
+
+.playlist-cards {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.playlist-cards .card {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e3a8a;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin-bottom: 100px;
+}
+
+.card:hover {
+  background-color: #bce8e16f;
+}

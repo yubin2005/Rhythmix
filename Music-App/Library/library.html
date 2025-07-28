@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Library</title>
+  <link rel="icon" type="image/png" href="../music-icon.png">
+  <link rel="stylesheet" href="../music.css">
+  <link rel="stylesheet" href="../sidebar.css">
+  <link rel="stylesheet" href="library.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <h1 class="logo"><a href="../Home/music.html">Rhythmix</a></h1>
+      <nav>
+        <ul>
+          <li><a href="../Home/music.html">HOME</a></li>
+          <li><a href="../Explore/explore.html">EXPLORE</a></li>
+          <li><a href="library.html">YOUR LIBRARY</a></li>
+          <li><a href="../Login/login.html" id="authLink">LOG IN / SIGN UP</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <!-- Left-Side -->
+      <div class="library-panel">
+        <h1 class="title">YOUR LIBRARY</h1>
+        <div class="upload-box">
+          <label for="file-upload">Upload from your computer</label>
+          <input id="file-upload" type="file" accept="audio/*" multiple />
+        </div>
+      </div>
+      
+      <!-- Right-Side -->
+      <div class="saved-files">
+        <h2 class="title">Saved Files</h2>
+        <ul id="file-list"></ul>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="../Login/signout.js" defer></script>
+  <script type="module" src="library.js" defer></script>
+</body>
+</html>

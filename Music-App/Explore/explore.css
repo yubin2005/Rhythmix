@@ -1,0 +1,217 @@
+main.main-content {
+  padding: 40px;
+}
+.ai-generator,
+.mood-selector,
+.trending {
+  margin-bottom: 50px;
+}
+
+/* Section Headings */
+.mood-selector h2,
+.ai-generator h2,
+.trending h2 {
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 30px;
+}
+.mood-selector h2::after,
+.ai-generator h2::after,
+.trending h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #8EC5FC, #E0C3FC);
+  border-radius: 2px;
+}
+
+/* Buttons & Inputs */
+#generateBtn,
+.mood-buttons button {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+#generateBtn {
+  background: linear-gradient(to right, #8EC5FC, #E0C3FC);
+  color: #2c3e50;
+}
+#generateBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+#generateBtn:hover:not(:disabled) {
+  background: linear-gradient(to right, #7DBDF9, #D8BAFC);
+}
+
+.mood-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+.mood-input {
+  padding: 10px 20px;
+  border: 1px solid #6078EA;
+  border-radius: 20px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  color: #6078EA;
+  background: #FDFAF6;
+  transition: background 0.2s, border-color 0.2s;
+}
+.mood-input:focus {
+  outline: none;
+  border-color: #6078EA;
+}
+.mood-buttons button {
+  background: #FDFAF6;
+  border: 1px solid #6078EA;
+  color: #6078EA;
+}
+.mood-buttons button.active {
+  background: linear-gradient(to right, #8EC5FC, #E0C3FC);
+  color: #2c3e50;
+}
+.mood-buttons button:hover {
+  background: #6078EA;
+  color: #fff;
+}
+
+/* AI Playlist Cards*/
+.ai-playlist,
+.mood-playlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+.ai-playlist .card {
+  background: linear-gradient(135deg, rgba(142,197,252,0.4), rgba(224,195,252,0.4));
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ai-playlist .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.ai-playlist .card h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+.ai-playlist .card p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #555;
+}
+
+/* Cover image & audio player in cards */
+.card img.cover {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  object-fit: cover;
+}
+.card audio {
+  width: 100%;
+  margin-top: 8px;
+}
+.card small {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Loading Spinner & Tip */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px 0;
+}
+.hidden {
+  display: none !important;
+}
+#loadingTip {
+  font-size: 0.95rem;
+  color: #555;
+  font-style: italic;
+}
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 4px solid rgba(0,0,0,0.1);
+  border-top-color: #8EC5FC;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/*  Now Trending Cards */
+.trending-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+.trending-list .t-item {
+  background: linear-gradient(135deg, rgba(142,197,252,0.4), rgba(224,195,252,0.4));
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.trending-list .t-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.t-cover {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.t-info {
+  width: 100%;
+}
+.song-title {
+  display: block;
+  font-weight: 600;
+  color: #2c3e50;
+}
+.song-artist {
+  display: block;
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 4px;
+}
+.t-audio {
+  width: 100%;
+  margin-top: 8px;
+}
