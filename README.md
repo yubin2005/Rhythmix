@@ -11,7 +11,7 @@ The Library section allows uploading MP3 files to create a personal collection. 
 
 ## Tech Stack
 
-- **Frontend:** HTML5, CSS3, Vanilla JavaScript  
+- **Frontend:** HTML, CSS, JavaScript  
 - **Backend:** Node.js with Express  
 - **Music Recommendation:** Deezer API & Google Gemini  
 - **Authentication:** Firebase Authentication  
